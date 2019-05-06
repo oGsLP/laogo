@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "plugin:vue/essential",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "vue",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "mocha": true,
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "parser": "babel-eslint"
+  }
+}
