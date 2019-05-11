@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <section class="laogo">
+  <section class="laogo" :style="{ 'font-family': fonts[fontIndex] }">
     <div class="logo-area">
       <div class="logo-box">
         <div
@@ -9,8 +9,7 @@
           id="logo"
           :style="{
             'font-size': fontSize + 'px',
-            'background-color': suffixColor,
-            'font-family': font
+            'background-color': suffixColor
           }"
         >
           <template v-if="!reverse">
@@ -55,7 +54,7 @@
       </div>
     </div>
 
-    <div class="customize" :style="{ 'font-family': font }">
+    <div class="customize">
       <div class="customize-color" id="prefixColor">
         <h2>Text</h2>
         <div>
@@ -68,8 +67,10 @@
         </div>
         <div>
           <label id="font-lb">Font : </label>
-          <b-button id="font-bt" variant="dark">Change</b-button>
-          <b-tooltip target="font-bt" :title="font" placement="right"></b-tooltip>
+          <b-button id="font-bt" variant="dark" @click="changeFont">{{
+            fonts[fontIndex]
+          }}</b-button>
+          <b-tooltip target="font-bt" title="change" placement="bottom"></b-tooltip>
         </div>
       </div>
 
@@ -87,14 +88,14 @@
           {{ fontSize }}px
         </div>
         <div>
-          <b-button variant="outline-dark" @click="reverseColor">Reverse Color</b-button>
-          <b-button variant="outline-dark" @click="reverseFix">Reverse Fix</b-button>
+          <b-button variant="outline-dark" @click="reverseColor">Reverse<br />Color</b-button>
+          <b-button variant="outline-dark" @click="reverseFix">Reverse<br />Fix</b-button>
         </div>
       </div>
     </div>
 
     <div class="download-share">
-      <button :style="{ fontFamily: font }" @click="download">Download</button>
+      <button @click="download">Download</button>
     </div>
   </section>
 </template>
@@ -109,11 +110,12 @@ export default {
     return {
       prefixColor: "#ffffff",
       suffixColor: "#000000",
-      font: "AnuDaw",
+      fontIndex: 0,
       reverse: false,
       fontSize: "60",
       prefixText: this.$store.getters.prefix,
-      suffixText: this.$store.getters.suffix
+      suffixText: this.$store.getters.suffix,
+      fonts: ["AnuDaw", "MamaLove"]
     };
   },
   methods: {
@@ -122,6 +124,9 @@ export default {
     },
     updateSuffix(e) {
       this.$store.commit("changeSuffix", e.target.childNodes[0].nodeValue);
+    },
+    changeFont() {
+      this.fontIndex = (this.fontIndex + 1) % this.fonts.length;
     },
     reverseFix() {
       this.reverse = !this.reverse;
@@ -172,20 +177,18 @@ export default {
   height 100%
   width 100%
 .logo-area
-  width 70%
+  width 69%
   height 78%
-  margin 3% 0 3% 1%
-  padding-top 2%
+  margin 3% 0 3% 2%
   display flex
   justify-content center
   align-items center
-  border-right 5px solid black
+  box-shadow black 1px 1px 1px,black 2px 2px 1px,black 3px 3px 2px,black 4px 4px 2px,black 5px 5px 3px
   overflow-y scroll
   overflow-x hidden
   .logo-box
-    border 5px dotted black
     border-radius 10px
-    padding 20px
+    padding 0
     margin 10px
     max-width 90%
     .logo-edit-area
@@ -199,7 +202,6 @@ export default {
         padding 0.5% 5px
         margin 1% 5px 2% 5px
         display block
-        font-family AnuDaw
         text-shadow 1px 1px 0 #CCC, 1px 2px 0 #CCC, 2px 1px 0 #CCC, 2px 2px 0 #CCC, 10px 10px 6px #444
       .postfix
         color #000
@@ -221,11 +223,11 @@ export default {
   display flex
   flex-direction column
   justify-content space-around
-  width 25%
+  width 26%
   height 80%
   margin 2% 1%
   .customize-color,.customize-misc
-    height 40%
+    height 45%
     display flex
     flex-direction column
     justify-content center
@@ -238,7 +240,7 @@ export default {
 .customize-misc input
   margin-left 5%
   display inline-block
-  width 50%
+  width 40%
   border 0
   vertical-align middle
 .customize-color label,
@@ -252,12 +254,9 @@ export default {
   display inline-block
   vertical-align middle
   margin 0
-.customize-color #font-lb
-  margin-right 8%
 .customize-color button
   font-size small
   width 32%
-  margin-right  20%
 .customize-misc button
   width 40%
 

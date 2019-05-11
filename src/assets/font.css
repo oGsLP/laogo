@@ -1,14 +1,34 @@
 @font-face {
   font-family: MamaLove;
-  src: url("./font/MamaLove.ttf");
+  src: url("./fonts/MamaLove.ttf");
 }
 
 @font-face {
   font-family: AnuDaw;
-  src: url("./font/AnuDaw.ttf");
+  src: url("./fonts/AnuDaw.ttf");
 }
 
 @font-face {
   font-family: "MURATA 2017";
-  src: url("./font/MURATA2017.ttf");
+  src: url("./fonts/MURATA2017.ttf");
+}
+
+@font-face {
+  font-family: Pumptrid;
+  src: url("./fonts/Pumptrid.ttf");
+}
+
+@font-face {
+  font-family: OldStamper;
+  src: url("./fonts/OldStamper.woff.ttf");
+}
+
+@font-face {
+  font-family: MicroBrew;
+  src: url("./fonts/MicroBrew.ttf");
+}
+
+@font-face {
+  font-family: HighlightPlain;
+  src: url("./fonts/HighlightPlain.ttf");
 }
