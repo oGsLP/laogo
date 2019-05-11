@@ -34,7 +34,7 @@ export default {
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
-  min-height: 754px;
+  height: 754px;
 }
 
 .left-sidebar {

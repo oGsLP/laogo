@@ -3,14 +3,7 @@
 <template>
   <section class="laogo">
     <div class="logo-area">
-      <div
-        class="logo-box"
-        v-tooltip="{
-          content: 'Edit the text to create your own logo',
-          show: true,
-          classes: 'tooltipClasses'
-        }"
-      >
+      <div class="logo-box">
         <div
           class="logo-edit-area"
           id="logo"
@@ -35,6 +28,7 @@
               contenteditable
               @input="updateSuffix"
               spellcheck="false"
+              v-model="suffixText"
               >{{ suffixText }}</span
             >
           </template>
@@ -61,39 +55,46 @@
       </div>
     </div>
 
-    <div class="customize">
-      <div
-        class="customize-color"
-        id="prefixColor"
-        v-tooltip="{ content: 'Pick a color you like', show: true, classes: 'tooltipClasses' }"
-      >
-        <div :style="{ 'font-family': font }">
+    <div class="customize" :style="{ 'font-family': font }">
+      <div class="customize-color" id="prefixColor">
+        <h2>Text</h2>
+        <div>
           <label>{{ prefixText + " : " }}</label
-          ><input type="color" v-model="prefixColor" />
+          ><b-form-input type="color" v-model="prefixColor"></b-form-input>
         </div>
-        <div :style="{ 'font-family': font }">
+        <div>
           <label>{{ suffixText + " : " }}</label
-          ><input type="color" v-model="suffixColor" />
+          ><b-form-input type="color" v-model="suffixColor"></b-form-input>
+        </div>
+        <div>
+          <label id="font-lb">Font : </label>
+          <b-button id="font-bt" variant="dark">Change</b-button>
+          <b-tooltip target="font-bt" :title="font" placement="right"></b-tooltip>
         </div>
       </div>
 
       <div class="customize-misc">
+        <h2>Style</h2>
         <div>
-          Font Size: <input type="range" min="30" max="200" v-model="fontSize" /> {{ fontSize }}px
+          Font Size:
+          <b-form-input
+            type="range"
+            variant="dark"
+            min="45"
+            max="150"
+            v-model="fontSize"
+          ></b-form-input>
+          {{ fontSize }}px
         </div>
-        <div>Reverse Highlight: <button @click="reverseColor">Reverse Color</button></div>
-        <div>Reverse Highlight: <button @click="reverseFix">Reverse Fix</button></div>
+        <div>
+          <b-button variant="outline-dark" @click="reverseColor">Reverse Color</b-button>
+          <b-button variant="outline-dark" @click="reverseFix">Reverse Fix</b-button>
+        </div>
       </div>
     </div>
 
     <div class="download-share">
-      <div
-        class="download"
-        v-tooltip="{ content: 'Export your own logo', show: true, classes: 'tooltipClasses' }"
-        @click="download"
-      >
-        Export
-      </div>
+      <button :style="{ fontFamily: font }" @click="download">Download</button>
     </div>
   </section>
 </template>
@@ -167,46 +168,53 @@ export default {
   display flex
   flex-wrap wrap
   justify-content space-between
-  align-items stretch
+  align-items flex-start
   height 100%
   width 100%
 .logo-area
   width 70%
-  height 75%
+  height 78%
   margin 3% 0 3% 1%
+  padding-top 2%
   display flex
   justify-content center
   align-items center
   border-right 5px solid black
+  overflow-y scroll
+  overflow-x hidden
   .logo-box
-    border 0
+    border 5px dotted black
     border-radius 10px
-    padding 0
+    padding 20px
     margin 10px
-    max-width 100%
+    max-width 90%
     .logo-edit-area
-      padding 20px
+      padding 10px 25px
       text-align center
       font-size 60px
       font-weight 700
       border-radius 10px
-      max-height 90%
-      min-height 80%
       .prefix
         color #fff
-        padding 10px 5px
-        margin 10px 5px
+        padding 0.5% 5px
+        margin 1% 5px 2% 5px
+        display block
         font-family AnuDaw
         text-shadow 1px 1px 0 #CCC, 1px 2px 0 #CCC, 2px 1px 0 #CCC, 2px 2px 0 #CCC, 10px 10px 6px #444
-
       .postfix
         color #000
         background-color #fff
-        padding 5px
-        margin 10px 5px
+        padding 0 10px
+        margin 3% 0
         border-radius 7px
-        display block
+        display inline-block
+        width auto
+        min-width 92%
+        horiz-align center
         text-shadow 1px 1px 0 #444, 1px 2px 0 #444, 2px 1px 0 #444, 2px 2px 0 #444, 6px 6px 8px #CCC
+
+.logo-area::-webkit-scrollbar
+  display none
 
 // customize things
 .customize
@@ -214,33 +222,62 @@ export default {
   flex-direction column
   justify-content space-around
   width 25%
-  height 75%
-  margin 3% 1%
+  height 80%
+  margin 2% 1%
   .customize-color,.customize-misc
-    border 2px skyblue solid
     height 40%
     display flex
     flex-direction column
     justify-content center
+    box-shadow black 1px 1px 1px,black 2px 2px 1px,black 3px 3px 2px,black 4px 4px 2px,black 5px 5px 3px
   .customize-color > div,
   .customize-misc > div
     font-weight bold
-    padding 8px 0
+    padding 5px 0
+.customize-color input,
+.customize-misc input
+  margin-left 5%
+  display inline-block
+  width 50%
+  border 0
+  vertical-align middle
+.customize-color label,
+.customize-misc label
+  display inline-block
+  vertical-align middle
+  margin 0
+  width 25%
+.customize-color button,
+.customize-misc button
+  display inline-block
+  vertical-align middle
+  margin 0
+.customize-color #font-lb
+  margin-right 8%
+.customize-color button
+  font-size small
+  width 32%
+  margin-right  20%
+.customize-misc button
+  width 40%
 
 // download and share buttons
 .download-share
   display flex
-  justify-content space-around
+  justify-content space-evenly
+  height 16%
   width 80%
   margin 0 10%
-  & > div
-    width 100px
-    height 40px
-    border-radius 3px
-    line-height 40px
-    text-align center
-    cursor pointer
-  .download
-    color black
-    background #f90
+  & > button
+    width auto
+    height 60px
+    border 0
+    font-size 36px
+    background transparent
+    border-bottom 5px solid black
+
+input[type=range]
+  margin-right 10px
+input[type=range]::-webkit-slider-thumb
+  background black
 </style>
