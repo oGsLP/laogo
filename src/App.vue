@@ -53,6 +53,7 @@ export default {
   height: auto;
   width: 74%;
   flex: auto;
+  font-family: AnuDaw, monospace;
   /*border: 0;*/
   margin: 0 0.9% 0 0;
 }

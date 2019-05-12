@@ -1,8 +1,8 @@
 <!-- @format -->
 
 <template>
-  <section class="laogo" :style="{ 'font-family': fonts[fontIndex] }">
-    <div class="logo-area">
+  <section class="laogo">
+    <div class="logo-area" :style="{ fontFamily: fonts[fontIndex] }">
       <div class="logo-box">
         <div
           class="logo-edit-area"
@@ -67,9 +67,13 @@
         </div>
         <div>
           <label id="font-lb">Font : </label>
-          <b-button id="font-bt" variant="dark" @click="changeFont">{{
-            fonts[fontIndex]
-          }}</b-button>
+          <b-button
+            id="font-bt"
+            variant="dark"
+            :style="{ fontFamily: fonts[fontIndex] }"
+            @click="changeFont"
+            >{{ fonts[fontIndex] }}</b-button
+          >
           <b-tooltip target="font-bt" title="change" placement="bottom"></b-tooltip>
         </div>
       </div>
@@ -102,7 +106,6 @@
 
 <script>
 import domtoimage from "dom-to-image";
-const FileSaver = require("file-saver");
 
 export default {
   name: "laogo",
@@ -136,7 +139,7 @@ export default {
       this.prefixColor = this.suffixColor;
       this.suffixColor = tmp;
     },
-    downloadIamge(imgsrc, name) {
+    downloadImage(imgsrc, name) {
       //下载图片地址和图片名
       let image = new Image();
       // 解决跨域 Canvas 污染问题
@@ -161,8 +164,7 @@ export default {
       let node = document.getElementById("logo");
       domtoimage.toPng(node).then(function(res) {
         console.log(res);
-        that.downloadIamge(res, "logo");
-        // FileSaver.saveAs(blob, 'logo.png')
+        that.downloadImage(res, that.prefixText + "_" + that.suffixText);
       });
     }
   }
@@ -170,6 +172,7 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .laogo
+  font-family AnuDaw
   display flex
   flex-wrap wrap
   justify-content space-between

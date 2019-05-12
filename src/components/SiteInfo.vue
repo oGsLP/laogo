@@ -3,7 +3,7 @@
 <template>
   <div id="site-info">
     <div class="pic">
-      <img src="./../assets/img/laogo.png" alt="" />
+      <img src="../../static/img/laogo.png" alt="" />
       <h1>Laogo</h1>
     </div>
     <div class="intro">
@@ -24,7 +24,6 @@ export default {
 <style lang="stylus" scoped>
 #site-info{
   color white
-  font-family HighlightPlain
   width auto
   height auto
   .pic{
