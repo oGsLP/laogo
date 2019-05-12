@@ -2,6 +2,8 @@
 
 > Lao logo generator
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22d92655-ae8a-4376-8597-c3af0ad122f1/deploy-status)](https://app.netlify.com/sites/laogo/deploys)
+
 ## Build Setup
 
 ``` bash

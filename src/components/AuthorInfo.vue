@@ -5,10 +5,10 @@
     <div class="info">
       <h2>oGsLP</h2>
     </div>
-    <b-modal title="QQ" id="qq-code-modal" hide-footer="true">
+    <b-modal title="QQ" id="qq-code-modal" hide-footer>
       <img class="modal-img" alt="" src="./../assets/img/qq.png" />
     </b-modal>
-    <b-modal title="Wechat" id="wechat-code-modal" hide-footer="true">
+    <b-modal title="Wechat" id="wechat-code-modal" hide-footer>
       <img class="modal-img" alt="" src="./../assets/img/wechat.png" />
     </b-modal>
     <div class="social">
@@ -21,9 +21,7 @@
       <a class="gmail" href="mailto:ogssober+laogo@gmail.com"
         ><i class="iconfont icon-gmail"></i> Email</a
       >
-      <a class="wechat" v-b-modal.wechat-code-modal
-        ><i class="iconfont icon-wechat"></i> Wechat</a
-      >
+      <a class="wechat" v-b-modal.wechat-code-modal><i class="iconfont icon-wechat"></i> Wechat</a>
     </div>
   </div>
 </template>
