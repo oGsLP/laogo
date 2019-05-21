@@ -24,7 +24,7 @@ export default {
     return {
       kinds: [
         { name: "Default", src: "laogo.png", link: "laogo" },
-        { name: "Digital", src: "laogo.png", link: "digital" },
+        { name: "Digital", src: "laogo.png", link: "digital" }
       ]
     };
   },

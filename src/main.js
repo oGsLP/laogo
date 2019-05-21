@@ -22,7 +22,7 @@ Vue.use(FormInput);
 import ListGroup from 'bootstrap-vue/es/components/list-group';
 Vue.use(ListGroup);
 import Modal from 'bootstrap-vue/es/components/modal'
-Vue.use(Modal)
+Vue.use(Modal);
 
 import Tooltip from 'bootstrap-vue/es/components/tooltip';
 Vue.use(Tooltip);

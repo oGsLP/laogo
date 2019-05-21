@@ -1,7 +1,7 @@
 <!-- @format -->
 
 <template>
-  <section id="laogo">
+  <section id="laogo-tiktok">
     <div class="logo-area" :style="{ fontFamily: fonts[fontIndex] }">
       <div class="logo-box">
         <div
@@ -11,46 +11,7 @@
             'font-size': fontSize + 'px',
             'background-color': suffixColor
           }"
-        >
-          <template v-if="!reverse">
-            <span
-              @input="updatePrefix"
-              class="prefix"
-              :style="{ color: prefixColor }"
-              contenteditable
-              spellcheck="false"
-              >{{ prefixText }}</span
-            >
-            <span
-              class="postfix"
-              :style="{ color: suffixColor, 'background-color': prefixColor }"
-              contenteditable
-              @input="updateSuffix"
-              spellcheck="false"
-              v-model="suffixText"
-              >{{ suffixText }}</span
-            >
-          </template>
-
-          <template v-else>
-            <span
-              class="postfix"
-              :style="{ color: suffixColor, 'background-color': prefixColor }"
-              contenteditable
-              @input="updateSuffix"
-              spellcheck="false"
-              >{{ prefixText }}</span
-            >
-            <span
-              @input="updatePrefix"
-              class="prefix"
-              :style="{ color: prefixColor }"
-              contenteditable
-              spellcheck="false"
-              >{{ suffixText }}</span
-            >
-          </template>
-        </div>
+        ></div>
       </div>
     </div>
 
@@ -105,14 +66,12 @@
 </template>
 
 <script>
-import domtoimage from "dom-to-image";
-
 export default {
-  name: "laogo",
+  name: "LaogoTiktok",
   data() {
     return {
       prefixColor: "#ffffff",
-      suffixColor: "#000000",
+      suffixColor: "#ffffff",
       fontIndex: 0,
       reverse: false,
       fontSize: "60",
@@ -170,8 +129,84 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+#logo {
+  position: relative;
+  width: 37px;
+  height: 218px;
+  margin: 100px auto;
+  z-index: 1;
+  background: #fff;
+  filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(150%) brightness(110%);
+  box-shadow: 11.6px 10px 0 0 #fe2d52;
+  z-index: 10;
+  // transform: skewX(-5deg);
+  animation: move 5s infinite ease-in;
+  top: -60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 37px solid #fff;
+    border-top: 37px solid transparent;
+    border-radius: 50%;
+    top: 123px;
+    left: -137px;
+    transform: rotate(45deg);
+    filter: drop-shadow(16px 0px 0 #fe2d52);
+    // mix-blend-mode: overlay;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border: 30px solid transparent;
+    border-bottom-color: #fff;
+    top: -100px;
+    right: -172px;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    z-index: -10;
+    filter: drop-shadow(14px 0 0 #fe2d52);
+  }
+}
+
+@keyframes move {
+  4% {
+    transform: skewX(7deg) translate(-30px);
+  }
+  7% {
+    transform: skewX(-6deg) translate(18px);
+  }
+  9% {
+    transform: skewX(5deg) translate(-8px);
+  }
+  10% {
+    transform: skewX(-4deg) translate(6px);
+  }
+  11% {
+    transform: skewX(3deg) translate(-4px);
+  }
+  12% {
+    transform: skewX(-2deg) translate(2px);
+  }
+  13% {
+    transform: skewX(1deg) translate(0px);
+    filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(120%) brightness(110%) blur(3px);
+  }
+  30% {
+    filter: drop-shadow(-10px -10px 0 #24f6f0) contrast(150%) brightness(120%) blur(0px);
+  }
+}
+</style>
+
 <style lang="stylus" scoped>
-#laogo
+#laogo-tiktok
   font-family AnuDaw
   display flex
   flex-wrap wrap
@@ -194,29 +229,29 @@ export default {
     padding 0
     margin 10px
     max-width 90%
-    .logo-edit-area
-      padding 10px 25px
-      text-align center
-      font-size 60px
-      font-weight 700
-      border-radius 10px
-      .prefix
-        color #fff
-        padding 0.5% 5px
-        margin 1% 5px 2% 5px
-        display block
-        text-shadow 1px 1px 0 #CCC, 1px 2px 0 #CCC, 2px 1px 0 #CCC, 2px 2px 0 #CCC, 10px 10px 6px #444
-      .postfix
-        color #000
-        background-color #fff
-        padding 0 10px
-        margin 3% 0
-        border-radius 7px
-        display inline-block
-        width auto
-        min-width 92%
-        horiz-align center
-        text-shadow 1px 1px 0 #444, 1px 2px 0 #444, 2px 1px 0 #444, 2px 2px 0 #444, 6px 6px 8px #CCC
+    /*.logo-edit-area*/
+      /*padding 10px 25px*/
+      /*text-align center*/
+      /*font-size 60px*/
+      /*font-weight 700*/
+      /*border-radius 10px*/
+      /*.prefix*/
+        /*color #fff*/
+        /*padding 0.5% 5px*/
+        /*margin 1% 5px 2% 5px*/
+        /*display block*/
+        /*text-shadow 1px 1px 0 #CCC, 1px 2px 0 #CCC, 2px 1px 0 #CCC, 2px 2px 0 #CCC, 10px 10px 6px #444*/
+      /*.postfix*/
+        /*color #000*/
+        /*background-color #fff*/
+        /*padding 0 10px*/
+        /*margin 3% 0*/
+        /*border-radius 7px*/
+        /*display inline-block*/
+        /*width auto*/
+        /*min-width 92%*/
+        /*horiz-align center*/
+        /*text-shadow 1px 1px 0 #444, 1px 2px 0 #444, 2px 1px 0 #444, 2px 2px 0 #444, 6px 6px 8px #CCC*/
 
 .logo-area::-webkit-scrollbar
   display none

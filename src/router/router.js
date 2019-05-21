@@ -48,6 +48,11 @@ export default new Router({
       // }
     },
     {
+      path: "/laogo/tiktok",
+      name: "tiktok",
+      component: ()=>import("./../generators/LaogoTiktok.vue"),
+    },
+    {
       path: "/laogo/digital",
       name: "digital",
       component: ()=>import("./../generators/LaogoDigital.vue"),
