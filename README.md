@@ -1,12 +1,27 @@
 # laogo
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22d92655-ae8a-4376-8597-c3af0ad122f1/deploy-status)](https://app.netlify.com/sites/laogo/deploys)
+
 > Lao logo generator
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/22d92655-ae8a-4376-8597-c3af0ad122f1/deploy-status)](https://app.netlify.com/sites/laogo/deploys)
+<img src="static/img/laogo.png">
+
+**We aimed at provide some excellent designs of logo, with theirs generators. Still updating, more styles to be seen!**
+
+* A SPA Vue+Webpack project
+* using vue-router, vuex, bootstrap-vue
+* unit and e2e tests, travis ci/coveralls to be added
+
+click [*here*](laogo.netlify.com) to take a glance at our site!
+
+| 序号  | 名称                | 预览                                                       | 添加日期        |
+|:---:|:-----------------:|:--------------------------------------------------------:|:-----------:|
+| 1   | laogo generator   | <img src="static/img/laogo.png" height="75" width="77" > | 19.05.11    |
+| 2   | digital generator | to be done....                                           | to be added |
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
