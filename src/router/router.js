@@ -1,20 +1,19 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from "vue";
+import Router from "vue-router";
 
 /*
  * Todo: why dynamic import fail
  */
 
-
 Vue.use(Router);
 
 export default new Router({
-    // mode: "hash",
+  // mode: "hash",
   routes: [
     {
       path: "*",
       name: "notFound",
-      component: ()=>import("./../components/NotFound.vue"),
+      component: () => import("./../components/NotFound.vue")
       // meta: {
       //     analytics: {
       //         pageviewTemplate(route) {
@@ -29,13 +28,12 @@ export default new Router({
     {
       path: "/",
       name: "main",
-      component: ()=>import("./../components/Main.vue"),
-
+      component: () => import("./../components/Main.vue")
     },
     {
       path: "/laogo",
       name: "laogo",
-      component: ()=>import("./../generators/Laogo.vue"),
+      component: () => import("./../generators/Laogo.vue")
       // meta: {
       //     analytics: {
       //         pageviewTemplate(route) {
@@ -50,13 +48,12 @@ export default new Router({
     {
       path: "/laogo/tiktok",
       name: "tiktok",
-      component: ()=>import("./../generators/LaogoTiktok.vue"),
+      component: () => import("./../generators/LaogoTiktok.vue")
     },
     {
       path: "/laogo/digital",
       name: "digital",
-      component: ()=>import("./../generators/LaogoDigital.vue"),
+      component: () => import("./../generators/LaogoDigital.vue")
     }
   ]
 });
-

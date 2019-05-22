@@ -21,7 +21,9 @@
       <a class="gmail" href="mailto:ogssober+laogo@gmail.com"
         ><i class="iconfont icon-gmail"></i> Email</a
       >
-      <a class="wechat" v-b-modal.wechat-code-modal><i class="iconfont icon-wechat"></i> Wechat</a>
+      <a class="wechat" v-b-modal.wechat-code-modal
+        ><i class="iconfont icon-wechat"></i> Wechat</a
+      >
     </div>
   </div>
 </template>

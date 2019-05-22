@@ -74,7 +74,11 @@
             @click="changeFont"
             >{{ fonts[fontIndex] }}</b-button
           >
-          <b-tooltip target="font-bt" title="change" placement="bottom"></b-tooltip>
+          <b-tooltip
+            target="font-bt"
+            title="change"
+            placement="bottom"
+          ></b-tooltip>
         </div>
       </div>
 
@@ -92,8 +96,12 @@
           {{ fontSize }}px
         </div>
         <div>
-          <b-button variant="outline-dark" @click="reverseColor">Reverse<br />Color</b-button>
-          <b-button variant="outline-dark" @click="reverseFix">Reverse<br />Fix</b-button>
+          <b-button variant="outline-dark" @click="reverseColor"
+            >Reverse<br />Color</b-button
+          >
+          <b-button variant="outline-dark" @click="reverseFix"
+            >Reverse<br />Fix</b-button
+          >
         </div>
       </div>
     </div>

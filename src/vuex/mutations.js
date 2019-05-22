@@ -1,9 +1,8 @@
 export default {
-  changePrefix : (state, prefix) => {
+  changePrefix: (state, prefix) => {
     state.prefix = prefix;
   },
-  changeSuffix : (state, suffix) => {
+  changeSuffix: (state, suffix) => {
     state.suffix = suffix;
   }
 };
-

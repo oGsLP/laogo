@@ -45,8 +45,8 @@ export default {
   /*border: 0;*/
   margin: 0;
   background: black;
-  box-shadow: #000 5px 5px 10px, #000 4px 4px 10px, #000 3px 3px 10px, #000 2px 2px 10px,
-    #000 1px 1px 10px;
+  box-shadow: #000 5px 5px 10px, #000 4px 4px 10px, #000 3px 3px 10px,
+    #000 2px 2px 10px, #000 1px 1px 10px;
 }
 
 .main-generator {
