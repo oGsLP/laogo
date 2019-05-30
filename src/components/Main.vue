@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <template>
   <section id="main">
     <h1>Lao go</h1>
