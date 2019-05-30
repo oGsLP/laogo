@@ -36,6 +36,7 @@ Vue.config.productionTip = false;
 //     pageviewOnLoad: false,
 //   },
 // });
+Vue.prototype.$baseUrl = process.env.BASE_URL;
 
 new Vue({
   el: "#app",

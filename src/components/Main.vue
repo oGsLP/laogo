@@ -9,7 +9,7 @@
         @click="linkGenerator(kind.link)"
       >
         <h2>{{ kind.name }}</h2>
-        <img :src="'/static/img/' + kind.src" alt="" />
+        <img :src="`${$baseUrl + pngRoot + kind.src}`" alt="" />
       </div>
     </div>
   </section>
@@ -20,6 +20,7 @@ export default {
   name: "Main",
   data() {
     return {
+      pngRoot: "img/",
       kinds: [
         { name: "Default", src: "laogo.png", link: "laogo" },
         { name: "Digital", src: "laogo.png", link: "digital" }

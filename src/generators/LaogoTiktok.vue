@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import domToImage from "dom-to-image";
 export default {
   name: "LaogoTiktok",
   data() {
@@ -129,7 +130,7 @@ export default {
     download() {
       let that = this;
       let node = document.getElementById("logo");
-      domtoimage.toPng(node).then(function(res) {
+      domToImage.toPng(node).then(function(res) {
         console.log(res);
         that.downloadImage(res, that.prefixText + "_" + that.suffixText);
       });

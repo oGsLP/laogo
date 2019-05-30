@@ -9,9 +9,9 @@
 
 **We aimed at provide some excellent designs of logo, with theirs generators. Still updating, more styles to be seen!**
 
-* A SPA Vue+Webpack project
+* A SPA @Vue/cli@3.8 project
 * using vue-router, vuex, bootstrap-vue
-* unit and e2e tests, travis ci/coveralls to be added
+* jest unit and nightwatch e2e tests, travis ci/coveralls to be added
 
 click [*here*](laogo.netlify.com) to take a glance at our site!
 
@@ -27,7 +27,7 @@ click [*here*](laogo.netlify.com) to take a glance at our site!
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm run serve
 
 # build for production with minification
 npm run build
@@ -36,13 +36,15 @@ npm run build
 npm run build --report
 
 # run unit tests
-npm run unit
+npm run test:unit
+/
+npm run test
 
 # run e2e tests
-npm run e2e
+npm run test:e2e 
 
-# run all tests
-npm test
+# send coveralls
+npm run coveralls
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

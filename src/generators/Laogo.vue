@@ -27,7 +27,6 @@
               contenteditable
               @input="updateSuffix"
               spellcheck="false"
-              v-model="suffixText"
               >{{ suffixText }}</span
             >
           </template>
@@ -113,7 +112,7 @@
 </template>
 
 <script>
-import domtoimage from "dom-to-image";
+import domToImage from "dom-to-image";
 
 export default {
   name: "laogo",
@@ -170,7 +169,7 @@ export default {
     download() {
       let that = this;
       let node = document.getElementById("logo");
-      domtoimage.toPng(node).then(function(res) {
+      domToImage.toPng(node).then(function(res) {
         console.log(res);
         that.downloadImage(res, that.prefixText + "_" + that.suffixText);
       });
