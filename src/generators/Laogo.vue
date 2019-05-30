@@ -170,7 +170,6 @@ export default {
       let that = this;
       let node = document.getElementById("logo");
       domToImage.toPng(node).then(function(res) {
-        console.log(res);
         that.downloadImage(res, that.prefixText + "_" + that.suffixText);
       });
     }

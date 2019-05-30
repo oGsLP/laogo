@@ -1,11 +1,13 @@
 # laogo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/22d92655-ae8a-4376-8597-c3af0ad122f1/deploy-status)](https://app.netlify.com/sites/laogo/deploys)
- [![Dependency Status](https://david-dm.org/oGsLP/laogo.svg?theme=shields.io)](https://david-dm.org/oGsLP/laogo)
+[![Dependency Status](https://david-dm.org/oGsLP/laogo.svg?theme=shields.io)](https://david-dm.org/oGsLP/laogo)
+[![Build Status](https://travis-ci.com/oGsLP/laogo.svg?branch=master)](https://travis-ci.com/oGsLP/laogo)
+[![Coverage Status](https://coveralls.io/repos/github/oGsLP/laogo/badge.svg?branch=master)](https://coveralls.io/github/oGsLP/laogo?branch=master)
 
 > Lao logo generator
 
-<img src="static/img/laogo.png">
+<img src="public/img/laogo.png">
 
 **We aimed at provide some excellent designs of logo, with theirs generators. Still updating, more styles to be seen!**
 
@@ -17,7 +19,7 @@ click [*here*](laogo.netlify.com) to take a glance at our site!
 
 | 序号  | 名称                | 预览                                                       | 添加日期        |
 |:---:|:-----------------:|:--------------------------------------------------------:|:-----------:|
-| 1   | laogo generator   | <img src="static/img/laogo.png" height="75" width="77" > | 19.05.11    |
+| 1   | laogo generator   | <img src="public/img/laogo.png" height="75" width="77" > | 19.05.11    |
 | 2   | digital generator | to be done....                                           | to be added |
 
 ## Build Setup
@@ -37,8 +39,8 @@ npm run build --report
 
 # run unit tests
 npm run test:unit
-/
-npm run test
+// or
+npm test
 
 # run e2e tests
 npm run test:e2e 

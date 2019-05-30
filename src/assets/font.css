@@ -24,11 +24,6 @@
 }
 
 @font-face {
-  font-family: MicroBrew;
-  src: url("./fonts/MicroBrew.ttf");
-}
-
-@font-face {
   font-family: HighlightPlain;
   src: url("./fonts/HighlightPlain.ttf");
 }
