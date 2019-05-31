@@ -29,13 +29,15 @@ Vue.use(Tooltip);
 
 Vue.config.productionTip = false;
 
-// Vue.use(VueAnalytics, {
-//   id: 'UA-139600522-1',
-//   router,
-//   autoTracking: {
-//     pageviewOnLoad: false,
-//   },
-// });
+import VueAnalytics from "vue-analytics";
+
+Vue.use(VueAnalytics, {
+  id: 'UA-139600522-2',
+  router,
+  autoTracking: {
+    pageviewOnLoad: false,
+  },
+});
 Vue.prototype.$baseUrl = process.env.BASE_URL;
 
 new Vue({
