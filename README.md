@@ -44,7 +44,7 @@ click [*here*](https://laogo.netlify.com) to take a glance at our site!
 
 * A SPA @Vue/cli@3.8 project
 * using vue-router, vuex, bootstrap-vue
-* jest unit and nightwatch e2e tests, travis ci/coveralls to be added
+* jest unit and nightWatch e2e tests, travis ci/coveralls to be added
 
 ## Generators
 
@@ -66,7 +66,7 @@ npm run serve
 npm run build
 
 # build for production and view the bundle analyzer report
-npm run build --report
+npm run report
 
 # run unit tests
 npm run test:unit
@@ -79,9 +79,6 @@ npm run test:e2e
 # send coveralls
 npm run coveralls
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
 
 
 
