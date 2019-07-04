@@ -2,8 +2,13 @@
 
 <template>
   <div id="site-info">
-    <div class="pic">
-      <img src="../../public/img/laogo.png" alt="" />
+    <div class="pic" style="background-color: black">
+      <img
+        src="../../public/img/laogo.png"
+        @click="toLaoGo"
+        style="cursor:pointer"
+        alt=""
+      />
       <!--      <h1>Laogo</h1>-->
     </div>
     <!--    <div class="intro">-->
@@ -17,7 +22,12 @@
 
 <script>
 export default {
-  name: "SiteInfo"
+  name: "SiteInfo",
+  methods: {
+    toLaoGo() {
+      this.$router.push({ name: "laogo" });
+    }
+  }
 };
 </script>
 

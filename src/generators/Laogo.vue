@@ -66,12 +66,28 @@
           ><b-form-input type="color" v-model="suffixColor"></b-form-input>
         </div>
         <div>
-          <b-button variant="outline-dark" @click="reverseColor"
+          <b-button
+            id="reverse-color-button"
+            variant="outline-dark"
+            @click="reverseColor"
             >Reverse<br />Color</b-button
           >
-          <b-button variant="outline-dark" @click="reverseFix"
+          <b-button
+            id="reverse-affix-button"
+            variant="outline-dark"
+            @click="reverseFix"
             >Reverse<br />Affix</b-button
           >
+          <b-tooltip
+            target="reverse-color-button"
+            placement="bottom"
+            title="Click here to reverse color!"
+          ></b-tooltip>
+          <b-tooltip
+            target="reverse-affix-button"
+            placement="bottom"
+            title="Click here to reverse affix!"
+          ></b-tooltip>
         </div>
       </div>
 
@@ -93,27 +109,26 @@
             <label id="font-lb">Font : </label>
             <b-button
               id="font-bt"
+              v-b-tooltip.hover
+              placement="right"
+              title="Click here to change font"
               variant="dark"
               :style="{ fontFamily: fonts[fontIndex] }"
               @click="changeFont"
               >{{ fonts[fontIndex] }}</b-button
             >
-            <b-tooltip
-              target="font-bt"
-              title="change"
-              placement="right"
-            ></b-tooltip>
           </div>
           <div>
             <label id="direction-lb">Order : </label>
-            <b-button id="font-bt" variant="dark" @click="reverseDirection">{{
-              direction
-            }}</b-button>
-            <b-tooltip
-              target="font-bt"
-              title="change"
+            <b-button
+              id="font-bt"
+              v-b-tooltip.hover
               placement="right"
-            ></b-tooltip>
+              title="Click here to change order"
+              variant="dark"
+              @click="reverseDirection"
+              >{{ direction }}</b-button
+            >
           </div>
         </div>
       </div>
