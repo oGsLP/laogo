@@ -148,6 +148,14 @@ export default {
     }
   },
   methods: {
+    makeToast(variant = null, text = "toast") {
+      this.$bvToast.toast(text, {
+        title: `Variant ${variant || "default"}`,
+        autoHideDelay: 2000,
+        variant: variant,
+        solid: true
+      });
+    },
     updatePrefix(e) {
       this.$store.commit("changePrefix", e.target.childNodes[0].nodeValue);
     },
@@ -190,11 +198,20 @@ export default {
       image.src = imgsrc;
     },
     download() {
+      this.makeToast("info", "Downloading");
       let that = this;
       let node = document.getElementById("logo");
-      domToImage.toPng(node).then(function(res) {
-        that.downloadImage(res, that.prefixText + "_" + that.suffixText);
-      });
+      setTimeout(() => {
+        domToImage
+          .toPng(node)
+          .then(function(res) {
+            that.downloadImage(res, that.prefixText + "_" + that.suffixText);
+            that.makeToast("success", "Done!");
+          })
+          .catch(() => {
+            that.makeToast("warning", "Failed");
+          });
+      }, 1000);
     }
   }
 };

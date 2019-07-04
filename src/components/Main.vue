@@ -1,13 +1,16 @@
 <template>
   <section id="main">
-    <v-typewriter class="print-text" interval="50">
+    <v-typewriter class="print-text" :interval="50">
       <p>Need a logo for your products or website?</p>
-      <p>Don't want waste much time?</p>
+      <p>Don't want to waste much time?</p>
       <p>Want it free?</p>
       <p>Ok...</p>
       <p>Let's have a try for Laogo</p>
     </v-typewriter>
-    <b-button variant="outline-dark" @click="linkGenerator('laogo')"
+    <b-button
+      :style="{ opacity: btnShow }"
+      variant="outline-dark"
+      @click="linkGenerator('laogo')"
       >Enter ></b-button
     >
 
@@ -34,8 +37,14 @@ export default {
       kinds: [
         { name: "Laogo", src: "laogo.png", link: "laogo" }
         // { name: "Digital", src: "laogo.png", link: "digital" }
-      ]
+      ],
+      btnShow: 0
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.btnShow = 1;
+    }, 6200);
   },
   methods: {
     linkGenerator(link) {
@@ -47,18 +56,23 @@ export default {
 
 <style lang="stylus" scoped>
 #main{
+  font-family Consolas
   color black
   margin 10% 20% 0 20%
   padding 0 5%
-  height 80%
+  height 82%
   width 60%
   .print-text{
     width 100%
-    text-align center
-    font-family Consolas
     font-size 32px
-    height 400px
+    height 390px
   }
+  button{
+    margin-left 0
+    font-size 28px
+    transition: opacity 3s;
+  }
+
 
   #slides{
     height 80%
@@ -89,6 +103,7 @@ export default {
     }
   }
 }
+
 #slides::-webkit-scrollbar{
   width 0
 }
