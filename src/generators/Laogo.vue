@@ -85,7 +85,7 @@
       <div class="customize-misc">
         <h2>Style</h2>
         <div>
-          Font Size:
+          Size:
           <b-form-input
             type="range"
             variant="dark"
@@ -107,10 +107,9 @@
           >
         </div>
       </div>
-    </div>
-
-    <div class="download-share">
-      <button @click="download">Download</button>
+      <div class="download-share">
+        <button @click="download">Download</button>
+      </div>
     </div>
   </section>
 </template>
@@ -200,9 +199,9 @@ export default {
   height 100%
   width 100%
 .logo-area
-  width 69%
-  height 78%
-  margin 3% 0 3% 2%
+  width 66%
+  height 88%
+  margin 3% 1% 3% 3%
   display flex
   justify-content center
   align-items center
@@ -219,7 +218,7 @@ export default {
       text-align center
       font-size 60px
       font-weight 700
-      border-radius 10px
+      border-radius 0.15em
       &.dir-vertical>span
         display block
         &.prefix
@@ -245,7 +244,7 @@ export default {
       .postfix
         color #000
         background-color #fff
-        border-radius 7px
+        border-radius .15em
         text-shadow 1px 1px 0 #444, 1px 2px 0 #444, 2px 1px 0 #444, 2px 2px 0 #444, 6px 6px 8px #CCC
 
 .logo-area::-webkit-scrollbar
@@ -255,12 +254,12 @@ export default {
 .customize
   display flex
   flex-direction column
-  justify-content space-around
-  width 26%
-  height 80%
-  margin 2% 1%
+  justify-content space-between
+  width 27%
+  height 88%
+  margin 3% 1%
   .customize-color,.customize-misc
-    height 45%
+    height 41%
     display flex
     flex-direction column
     justify-content center
@@ -297,7 +296,6 @@ export default {
 .download-share
   display flex
   justify-content space-evenly
-  height 16%
   width 80%
   margin 0 10%
   & > button

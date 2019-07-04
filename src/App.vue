@@ -40,7 +40,7 @@ export default {
 .left-sidebar {
   color: white;
   height: auto;
-  width: 20%;
+  width: 5%;
   flex: auto;
   /*border: 0;*/
   margin: 0;
@@ -51,7 +51,7 @@ export default {
 
 .main-generator {
   height: auto;
-  width: 74%;
+  width: 89%;
   flex: auto;
   font-family: AnuDaw, monospace;
   /*border: 0;*/

@@ -4,14 +4,14 @@
   <div id="site-info">
     <div class="pic">
       <img src="../../public/img/laogo.png" alt="" />
-      <h1>Laogo</h1>
+      <!--      <h1>Laogo</h1>-->
     </div>
-    <div class="intro">
-      <p>
-        &emsp;A <b>lao</b> logo generator.<br />
-        Several kinds of generators to choose. <br />&emsp;To be continued...
-      </p>
-    </div>
+    <!--    <div class="intro">-->
+    <!--      <p>-->
+    <!--        &emsp;A <b>lao</b> logo generator.<br />-->
+    <!--        Several kinds of generators to choose. <br />&emsp;To be continued...-->
+    <!--      </p>-->
+    <!--    </div>-->
   </div>
 </template>
 
@@ -32,21 +32,13 @@ export default {
     padding 0 5%
     display block
     img{
-      width 30%
+      width 98%
       display inline-block
-      margin-right 15%
+      margin 1%
       vertical-align middle
+      border-radius 5px
+      box-shadow #eeeeee 1px 1px 4px
       }
-    h1{
-      font-size 42px
-      font-weight bolder
-      width 45%
-      display inline-block
-      vertical-align middle
-      border-bottom 5px solid white
-      text-shadow darkslategrey 5px 5px 5px
-      padding-bottom 10px
-    }
   }
   .intro{
     margin 2%
