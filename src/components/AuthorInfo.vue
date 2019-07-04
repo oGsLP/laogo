@@ -48,18 +48,19 @@ export default {
   width 100%
   padding 2% 0 5%
   .info{
-    margin 2% 1%
+    margin 1% 1% 10% 1%
     display flex
     flex-direction row
     justify-content center
     align-items center
     h2{
       margin 0
-      font-size 24px
+      font-size 20px
+      font-family AnuDaw
     }
   }
   .social{
-    font-size 32px
+    font-size 28px
     margin 2%
     padding-bottom 50px
     width 96%

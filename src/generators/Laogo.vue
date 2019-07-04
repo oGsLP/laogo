@@ -55,37 +55,30 @@
     </div>
 
     <div class="customize">
-      <div class="customize-color" id="prefixColor">
-        <h2>Text</h2>
+      <div class="customize-style">
+        <h2>Affix</h2>
         <div>
-          <label>{{ prefixText + " : " }}</label
-          ><b-form-input type="color" v-model="prefixColor"></b-form-input>
+          <label>prefix :</label>
+          <b-form-input type="color" v-model="prefixColor"></b-form-input>
         </div>
         <div>
-          <label>{{ suffixText + " : " }}</label
+          <label>suffix :</label
           ><b-form-input type="color" v-model="suffixColor"></b-form-input>
         </div>
         <div>
-          <label id="font-lb">Font : </label>
-          <b-button
-            id="font-bt"
-            variant="dark"
-            :style="{ fontFamily: fonts[fontIndex] }"
-            @click="changeFont"
-            >{{ fonts[fontIndex] }}</b-button
+          <b-button variant="outline-dark" @click="reverseColor"
+            >Reverse<br />Color</b-button
           >
-          <b-tooltip
-            target="font-bt"
-            title="change"
-            placement="bottom"
-          ></b-tooltip>
+          <b-button variant="outline-dark" @click="reverseFix"
+            >Reverse<br />Affix</b-button
+          >
         </div>
       </div>
 
       <div class="customize-misc">
         <h2>Style</h2>
-        <div>
-          Size:
+        <div id="range-div">
+          <label id="size-lb">Size : </label>
           <b-form-input
             type="range"
             variant="dark"
@@ -93,18 +86,35 @@
             max="150"
             v-model="fontSize"
           ></b-form-input>
-          {{ fontSize }}px
+          <span>{{ fontSize }}px</span>
         </div>
-        <div>
-          <b-button variant="outline-dark" @click="reverseColor"
-            >Reverse<br />Color</b-button
-          >
-          <b-button variant="outline-dark" @click="reverseFix"
-            >Reverse<br />Fix</b-button
-          >
-          <b-button variant="outline-dark" @click="reverseDirection"
-            >Reverse<br />Dir</b-button
-          >
+        <div id="style-div">
+          <div>
+            <label id="font-lb">Font : </label>
+            <b-button
+              id="font-bt"
+              variant="dark"
+              :style="{ fontFamily: fonts[fontIndex] }"
+              @click="changeFont"
+              >{{ fonts[fontIndex] }}</b-button
+            >
+            <b-tooltip
+              target="font-bt"
+              title="change"
+              placement="right"
+            ></b-tooltip>
+          </div>
+          <div>
+            <label id="direction-lb">Order : </label>
+            <b-button id="font-bt" variant="dark" @click="reverseDirection">{{
+              direction
+            }}</b-button>
+            <b-tooltip
+              target="font-bt"
+              title="change"
+              placement="right"
+            ></b-tooltip>
+          </div>
         </div>
       </div>
       <div class="download-share">
@@ -258,37 +268,65 @@ export default {
   width 27%
   height 88%
   margin 3% 1%
-  .customize-color,.customize-misc
+  .customize-style,.customize-misc
     height 41%
     display flex
     flex-direction column
     justify-content center
     box-shadow black 1px 1px 1px,black 2px 2px 1px,black 3px 3px 2px,black 4px 4px 2px,black 5px 5px 3px
-  .customize-color > div,
+  .customize-style > div,
   .customize-misc > div
     font-weight bold
     padding 5px 0
-.customize-color input,
-.customize-misc input
+.customize-style input
   margin-left 5%
   display inline-block
   width 40%
   border 0
   vertical-align middle
 .customize-color label,
-.customize-misc label
   display inline-block
   vertical-align middle
-  margin 0
   width 25%
-.customize-color button,
+
+#range-div
+  label
+    margin 0 2.5% 0 10%
+    float left
+    vertical-align middle
+    width 25%
+  input
+    width 35%
+    margin 0
+    float left
+    vertical-align middle
+  span
+    margin-left 1%
+    float left
+    width 20%
+#style-div
+  div
+    display block
+    width 100%
+    margin 15px 0
+    label
+      margin 0 2.5% 0 10%
+      width 25%
+      vertical-align middle
+    button
+      width 40%
+      vertical-align middle
+      margin-right 20%
+.customize-style button,
 .customize-misc button
   display inline-block
   vertical-align middle
   margin 0
-.customize-color button
-  font-size small
-  width 32%
+.customize-style button
+  font-size 15px
+  line-height 19px
+  padding 5px
+  margin 0 20px
 .customize-misc button
   width 40%
 
