@@ -26,5 +26,5 @@ module.exports = {
     "!**src/assets/**",
     "!**/node_modules/**"
   ],
-  coverageReporters: ["json", "lcov", "text", "clover", "html"]
+  coverageReporters: ["json", "lcov", "text", "text-summary", "clover", "html"]
 };

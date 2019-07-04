@@ -22,8 +22,8 @@ export default {
     return {
       pngRoot: "img/",
       kinds: [
-        { name: "Default", src: "laogo.png", link: "laogo" },
-        { name: "Digital", src: "laogo.png", link: "digital" }
+        { name: "Laogo", src: "laogo.png", link: "laogo" }
+        // { name: "Digital", src: "laogo.png", link: "digital" }
       ]
     };
   },

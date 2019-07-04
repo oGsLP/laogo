@@ -6,6 +6,7 @@
       <div class="logo-box">
         <div
           class="logo-edit-area"
+          :class="dirClass"
           id="logo"
           :style="{
             'font-size': fontSize + 'px',
@@ -101,6 +102,9 @@
           <b-button variant="outline-dark" @click="reverseFix"
             >Reverse<br />Fix</b-button
           >
+          <b-button variant="outline-dark" @click="reverseDirection"
+            >Reverse<br />Dir</b-button
+          >
         </div>
       </div>
     </div>
@@ -125,8 +129,14 @@ export default {
       fontSize: "60",
       prefixText: this.$store.getters.prefix,
       suffixText: this.$store.getters.suffix,
-      fonts: ["AnuDaw", "MamaLove"]
+      fonts: ["AnuDaw", "MamaLove"],
+      direction: "horizontal"
     };
+  },
+  computed: {
+    dirClass() {
+      return `dir-${this.direction}`;
+    }
   },
   methods: {
     updatePrefix(e) {
@@ -145,6 +155,10 @@ export default {
       let tmp = this.prefixColor;
       this.prefixColor = this.suffixColor;
       this.suffixColor = tmp;
+    },
+    reverseDirection() {
+      this.direction =
+        this.direction === "vertical" ? "horizontal" : "vertical";
     },
     downloadImage(imgsrc, name) {
       //下载图片地址和图片名
@@ -201,27 +215,37 @@ export default {
     margin 10px
     max-width 90%
     .logo-edit-area
-      padding 10px 25px
+      padding 0.25em
       text-align center
       font-size 60px
       font-weight 700
       border-radius 10px
+      &.dir-vertical>span
+        display block
+        &.prefix
+          padding 0 5px
+          margin 0 5px
+        &.postfix
+          padding 0 10px
+          margin 0.1em 5px
+          width auto
+          min-width 90%
+          horiz-align center
+      &.dir-horizontal>span
+        display inline
+        &.prefix
+          padding 0.2em 0.1em
+          margin 0
+        &.postfix
+          padding 0.2em
+          margin 0 0.1em
       .prefix
         color #fff
-        padding 0.5% 5px
-        margin 1% 5px 2% 5px
-        display block
         text-shadow 1px 1px 0 #CCC, 1px 2px 0 #CCC, 2px 1px 0 #CCC, 2px 2px 0 #CCC, 10px 10px 6px #444
       .postfix
         color #000
         background-color #fff
-        padding 0 10px
-        margin 3% 0
         border-radius 7px
-        display inline-block
-        width auto
-        min-width 92%
-        horiz-align center
         text-shadow 1px 1px 0 #444, 1px 2px 0 #444, 2px 1px 0 #444, 2px 2px 0 #444, 6px 6px 8px #CCC
 
 .logo-area::-webkit-scrollbar

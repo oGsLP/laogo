@@ -55,50 +55,50 @@ export default new Router({
           },
       }
     },
-    {
-      path: "/laogo/tiktok",
-      name: "tiktok",
-      component: () => import("./../generators/LaogoTiktok.vue"),
-      meta: {
-        analytics: {
-          pageviewTemplate(route) {
-            return {
-              title: 'Laogo Tiktok',
-              page: route.path,
-            }
-          },
-        },
-      }
-    },
-    {
-      path: "/laogo/digital",
-      name: "digital",
-      component: () => import("./../generators/LaogoDigital.vue"),
-      meta: {
-        analytics: {
-          pageviewTemplate(route) {
-            return {
-              title: 'Laogo Digital',
-              page: route.path,
-            }
-          },
-        },
-      }
-    },
-    {
-      path: "/laogo/vue",
-      name: "vue",
-      component: () => import("./../generators/LaogoVue.vue"),
-      meta: {
-        analytics: {
-          pageviewTemplate(route) {
-            return {
-              title: 'Laogo Vue',
-              page: route.path,
-            }
-          },
-        },
-      }
-    }
+    // {
+    //   path: "/laogo/tiktok",
+    //   name: "tiktok",
+    //   component: () => import("./../generators/LaogoTiktok.vue"),
+    //   meta: {
+    //     analytics: {
+    //       pageviewTemplate(route) {
+    //         return {
+    //           title: 'Laogo Tiktok',
+    //           page: route.path,
+    //         }
+    //       },
+    //     },
+    //   }
+    // },
+    // {
+    //   path: "/laogo/digital",
+    //   name: "digital",
+    //   component: () => import("./../generators/LaogoDigital.vue"),
+    //   meta: {
+    //     analytics: {
+    //       pageviewTemplate(route) {
+    //         return {
+    //           title: 'Laogo Digital',
+    //           page: route.path,
+    //         }
+    //       },
+    //     },
+    //   }
+    // },
+    // {
+    //   path: "/laogo/vue",
+    //   name: "vue",
+    //   component: () => import("./../generators/LaogoVue.vue"),
+    //   meta: {
+    //     analytics: {
+    //       pageviewTemplate(route) {
+    //         return {
+    //           title: 'Laogo Vue',
+    //           page: route.path,
+    //         }
+    //       },
+    //     },
+    //   }
+    // }
   ]
 });

@@ -20,9 +20,9 @@ export default {
   data() {
     return {
       generators: [
-        { name: "laogo", linkName: "laogo" },
-        { name: "laogo tiktok", linkName: "tiktok" },
-        { name: "laogo digital", linkName: "digital" }
+        { name: "laogo", linkName: "laogo" }
+        // { name: "laogo tiktok", linkName: "tiktok" },
+        // { name: "laogo digital", linkName: "digital" }
       ]
     };
   },
