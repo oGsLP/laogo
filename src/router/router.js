@@ -15,14 +15,14 @@ export default new Router({
       name: "notFound",
       component: () => import("./../components/NotFound.vue"),
       meta: {
-          analytics: {
-              pageviewTemplate(route) {
-                  return {
-                      title: 'Not Found',
-                      page: route.path,
-                  }
-              },
-          },
+        analytics: {
+          pageviewTemplate(route) {
+            return {
+              title: "Not Found",
+              page: route.path
+            };
+          }
+        }
       }
     },
     {
@@ -33,28 +33,35 @@ export default new Router({
         analytics: {
           pageviewTemplate(route) {
             return {
-              title: 'Main',
-              page: route.path,
-            }
-          },
-        },
+              title: "Main",
+              page: route.path
+            };
+          }
+        }
       }
     },
     {
       path: "/laogo",
-      name: "laogo",
-      component: () => import("./../generators/Laogo.vue"),
-      meta: {
-          analytics: {
+      component: () => import("./../components/Layout.vue"),
+
+      children: [
+        {
+          path: "/",
+          name: "laogo",
+          component: () => import("./../generators/Laogo.vue"),
+          meta: {
+            analytics: {
               pageviewTemplate(route) {
-                  return {
-                      title: 'Laogo',
-                      page: route.path,
-                  }
-              },
-          },
-      }
-    },
+                return {
+                  title: "Laogo",
+                  page: route.path
+                };
+              }
+            }
+          }
+        }
+      ]
+    }
     // {
     //   path: "/laogo/tiktok",
     //   name: "tiktok",

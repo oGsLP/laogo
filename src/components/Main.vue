@@ -1,17 +1,27 @@
 <template>
   <section id="main">
-    <h1>Lao go</h1>
-    <div id="slides">
-      <div
-        class="generator-slide"
-        v-for="(kind, index) of kinds"
-        :key="'kind_' + index"
-        @click="linkGenerator(kind.link)"
-      >
-        <h2>{{ kind.name }}</h2>
-        <img :src="`${$baseUrl + pngRoot + kind.src}`" alt="" />
-      </div>
-    </div>
+    <v-typewriter class="print-text" interval="50">
+      <p>Need a logo for your products or website?</p>
+      <p>Don't want waste much time?</p>
+      <p>Want it free?</p>
+      <p>Ok...</p>
+      <p>Let's have a try for Laogo</p>
+    </v-typewriter>
+    <b-button variant="outline-dark" @click="linkGenerator('laogo')"
+      >Enter ></b-button
+    >
+
+    <!--    <div id="slides">-->
+    <!--      <div-->
+    <!--        class="generator-slide"-->
+    <!--        v-for="(kind, index) of kinds"-->
+    <!--        :key="'kind_' + index"-->
+    <!--        @click="linkGenerator(kind.link)"-->
+    <!--      >-->
+    <!--        <h2>{{ kind.name }}</h2>-->
+    <!--        <img :src="`${$baseUrl + pngRoot + kind.src}`" alt="" />-->
+    <!--      </div>-->
+    <!--    </div>-->
   </section>
 </template>
 
@@ -38,19 +48,18 @@ export default {
 <style lang="stylus" scoped>
 #main{
   color black
-  margin-top 3%
+  margin 10% 20% 0 20%
   padding 0 5%
-  height 90%
-  width 100%
-  h1{
-    margin 2% 30%
-    width 40%
-    font-size 60px
-    padding 5px
-    border 5px solid black
-    text-shadow black 5px 5px 5px
-    box-shadow black 1px 1px 1px,black 2px 2px 1px,black 3px 3px 2px,black 4px 4px 2px,black 5px 5px 3px
+  height 80%
+  width 60%
+  .print-text{
+    width 100%
+    text-align center
+    font-family Consolas
+    font-size 32px
+    height 400px
   }
+
   #slides{
     height 80%
     width 98%

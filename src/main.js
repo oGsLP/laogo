@@ -27,6 +27,9 @@ Vue.use(Modal);
 import Tooltip from "bootstrap-vue/es/components/tooltip";
 Vue.use(Tooltip);
 
+import VTypewriter from "v-typewriter";
+Vue.use(VTypewriter);
+
 Vue.config.productionTip = false;
 
 import VueAnalytics from "vue-analytics";
