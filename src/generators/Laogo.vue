@@ -69,25 +69,21 @@
           <b-button
             id="reverse-color-button"
             variant="outline-dark"
+            v-b-tooltip.hover
+            placement="bottom"
+            title="Click here to reverse color!"
             @click="reverseColor"
             >Reverse<br />Color</b-button
           >
           <b-button
             id="reverse-affix-button"
             variant="outline-dark"
+            v-b-tooltip.hover
+            placement="bottomRight"
+            title="Click here to reverse affix!"
             @click="reverseFix"
             >Reverse<br />Affix</b-button
           >
-          <b-tooltip
-            target="reverse-color-button"
-            placement="bottom"
-            title="Click here to reverse color!"
-          ></b-tooltip>
-          <b-tooltip
-            target="reverse-affix-button"
-            placement="bottom"
-            title="Click here to reverse affix!"
-          ></b-tooltip>
         </div>
       </div>
 
@@ -102,7 +98,6 @@
             max="150"
             v-model="fontSize"
           ></b-form-input>
-          <span>{{ fontSize }}px</span>
         </div>
         <div id="style-div">
           <div>
@@ -154,7 +149,7 @@ export default {
       prefixText: this.$store.getters.prefix,
       suffixText: this.$store.getters.suffix,
       fonts: ["AnuDaw", "MamaLove"],
-      direction: "horizontal"
+      direction: "vertical"
     };
   },
   computed: {
@@ -323,26 +318,24 @@ export default {
 
 #range-div
   label
-    margin 0 2.5% 0 10%
+    text-align right
+    margin 0 7.5% 0 7.5%
     float left
     vertical-align middle
     width 25%
   input
-    width 35%
+    width 42%
     margin 0
     float left
     vertical-align middle
-  span
-    margin-left 1%
-    float left
-    width 20%
 #style-div
   div
     display block
     width 100%
-    margin 15px 0
+    margin 20px 0
     label
-      margin 0 2.5% 0 10%
+      text-align right
+      margin 0 7.5% 0 7.5%
       width 25%
       vertical-align middle
     button

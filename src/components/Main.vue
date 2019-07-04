@@ -44,7 +44,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.btnShow = 1;
-    }, 6200);
+    }, 2200);
   },
   methods: {
     linkGenerator(link) {
@@ -70,7 +70,7 @@ export default {
   button{
     margin-left 0
     font-size 28px
-    transition: opacity 3s;
+    transition: opacity 5s;
   }
 
 

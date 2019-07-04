@@ -1,5 +1,4 @@
 <!-- @format -->
-
 <template>
   <div id="site-info">
     <div class="pic" style="background-color: black">
@@ -25,7 +24,7 @@ export default {
   name: "SiteInfo",
   methods: {
     toLaoGo() {
-      this.$router.push({ name: "laogo" });
+      this.$router.go(0);
     }
   }
 };
