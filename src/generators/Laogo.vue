@@ -148,7 +148,14 @@ export default {
       fontSize: "60",
       prefixText: this.$store.getters.prefix,
       suffixText: this.$store.getters.suffix,
-      fonts: ["AnuDaw", "MamaLove"],
+      fonts: [
+        "AnuDaw",
+        "AirStrip",
+        "SupMario",
+        // "PirouRegular",
+        "Adieresis",
+        "OldStamper"
+      ],
       direction: "vertical"
     };
   },
@@ -259,11 +266,11 @@ export default {
       &.dir-vertical>span
         display block
         &.prefix
-          padding 0 5px
-          margin 0 5px
+          padding 0 0.083em
+          margin 0 0.083em
         &.postfix
-          padding 0 10px
-          margin 0.1em 5px
+          padding 0 0.166em
+          margin 0.1em 0.083em
           width auto
           min-width 90%
           horiz-align center

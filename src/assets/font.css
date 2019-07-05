@@ -1,21 +1,6 @@
 @font-face {
-  font-family: MamaLove;
-  src: url("./fonts/MamaLove.ttf");
-}
-
-@font-face {
   font-family: AnuDaw;
   src: url("./fonts/AnuDaw.ttf");
-}
-
-@font-face {
-  font-family: "MURATA 2017";
-  src: url("./fonts/MURATA2017.ttf");
-}
-
-@font-face {
-  font-family: Pumptrid;
-  src: url("./fonts/Pumptrid.ttf");
 }
 
 @font-face {
@@ -24,6 +9,36 @@
 }
 
 @font-face {
-  font-family: HighlightPlain;
-  src: url("./fonts/HighlightPlain.ttf");
+  font-family: Adieresis;
+  src: url("./fonts/Adieresis.ttf");
+}
+
+@font-face {
+  font-family: Marske;
+  src: url("./fonts/Marske.otf");
+}
+
+@font-face {
+  font-family: AdamGorry;
+  src: url("./fonts/adam_gorry_lights.otf");
+}
+
+@font-face {
+  font-family: BrushStrike;
+  src: url("./fonts/brushstrike.ttf");
+}
+
+@font-face {
+  font-family: PirouRegular;
+  src: url("./fonts/Pirou-Regular.woff.ttf");
+}
+
+@font-face {
+  font-family: SupMario;
+  src: url("./fonts/Super-Mario-Bros.ttf");
+}
+
+@font-face {
+  font-family: AirStrip;
+  src: url("./fonts/airstrip.ttf");
 }
