@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import sideBar from "./../components/SideBar.vue";
+import sideBar from "./SideBar.vue";
 export default {
   name: "Layout",
   components: {

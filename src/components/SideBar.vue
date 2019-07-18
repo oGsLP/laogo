@@ -3,20 +3,20 @@
 <template>
   <div id="side-bar">
     <site-info id="site-info"></site-info>
-    <!--    <side-list id="side-list"></side-list>-->
+    <side-list id="side-list"></side-list>
     <author-info id="author-info"></author-info>
   </div>
 </template>
 
 <script>
-import AuthorInfo from "./AuthorInfo";
-// import SideList from "./SideList";
-import SiteInfo from "./SiteInfo";
+import AuthorInfo from "./side/AuthorInfo";
+import SideList from "./side/SideList";
+import SiteInfo from "./side/SiteInfo";
 export default {
   name: "SideBar",
   components: {
     SiteInfo,
-    // SideList,
+    SideList,
     AuthorInfo
   }
 };
@@ -32,13 +32,13 @@ export default {
   flex-direction column
   justify-content space-between
   #site-info{
-    height 25%
+    height 19%
   }
   #side-list{
-    height 50%
+    height 52%
   }
   #author-info{
-    height 20%
+    height 19%
   }
 }
 </style>

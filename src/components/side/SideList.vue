@@ -20,9 +20,9 @@ export default {
   data() {
     return {
       generators: [
-        { name: "laogo", linkName: "laogo" }
-        // { name: "laogo tiktok", linkName: "tiktok" },
-        // { name: "laogo digital", linkName: "digital" }
+        { name: "laogo", linkName: "laogo" },
+        { name: "laogo tiktok", linkName: "tiktok" },
+        { name: "laogo digital", linkName: "digital" }
       ]
     };
   },
@@ -35,16 +35,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#side-list{
+#side-list {
   padding: 10% 0
-  .list-group{
+
+  .list-group {
     margin 0 10% 0 10%
     width 80%
     height 100%
     overflow-y scroll
     border 1px solid white
     border-radius 20px
-    .list-item{
+
+    .list-item {
       width 90%
       margin 1% 5%
       background black
@@ -58,6 +60,6 @@ export default {
 
 }
 .list-group::-webkit-scrollbar {
-  width 0
+  display: none;
 }
 </style>

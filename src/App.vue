@@ -25,7 +25,7 @@ export default {
   color: #2c3e50;
 
   overflow-y: hidden;
-  height: 754px;
+  height: 792px;
 }
 
 h1,

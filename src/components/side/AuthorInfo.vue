@@ -6,10 +6,10 @@
       <h2>@oGsLP</h2>
     </div>
     <b-modal title="QQ" size="sm" id="qq-code-modal" hide-footer>
-      <img class="modal-img" alt="" src="../../public/img/qq.png" />
+      <img class="modal-img" alt="" src="../../../public/img/qq.png" />
     </b-modal>
     <b-modal title="Wechat" size="sm" id="wechat-code-modal" hide-footer>
-      <img class="modal-img" alt="" src="../../public/img/wechat.png" />
+      <img class="modal-img" alt="" src="../../../public/img/wechat.png" />
     </b-modal>
     <div class="social">
       <a class="github" href="https://github.com/oGsLP"

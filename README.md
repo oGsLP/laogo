@@ -35,14 +35,10 @@ click [*here*](https://laogo.netlify.com) to take a glance at our site!
 
 * Author: 
     * **oGsLP** ![GitHub followers][oGsLP followers url]
-* Collaborators:
-    * songjinze ![Github followers][songjinze followers url]
-    * DeviLily ![Github followers][DeviLily followers url]
-    * Godlike-Xiang ![Github followers][Godlike-Xiang followers url]
 
 ## Project
 
-* A SPA @Vue/cli@3.8 project
+* A SPA @Vue/cli@3.9.3 project
 * using vue-router, vuex, bootstrap-vue
 * jest unit and nightWatch e2e tests, travis ci/coveralls to be added
 
@@ -107,6 +103,7 @@ npm run coveralls
 [watchers url]:https://img.shields.io/github/watchers/oGsLP/laogo.svg?style=social
 
 [oGsLP followers url]:https://img.shields.io/github/followers/oGsLP.svg?style=social
+
 [DeviLily followers url]:https://img.shields.io/github/followers/DeviLily.svg?style=social
 [songjinze followers url]:https://img.shields.io/github/followers/songjinze.svg?style=social
 [Godlike-Xiang followers url]:https://img.shields.io/github/followers/Godlike-Xiang.svg?style=social

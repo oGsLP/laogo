@@ -3,7 +3,7 @@
   <div id="site-info">
     <div class="pic" style="background-color: black">
       <img
-        src="../../public/img/laogo.png"
+        src="../../../public/img/laogo.png"
         @click="toLaoGo"
         style="cursor:pointer"
         alt=""

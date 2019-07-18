@@ -56,13 +56,13 @@
 
     <div class="customize">
       <div class="customize-style">
-        <h2>Affix</h2>
+        <h2>Color</h2>
         <div>
-          <label>prefix :</label>
+          <label>&emsp;First :</label>
           <b-form-input type="color" v-model="prefixColor"></b-form-input>
         </div>
         <div>
-          <label>suffix :</label
+          <label>Second :</label
           ><b-form-input type="color" v-model="suffixColor"></b-form-input>
         </div>
         <div>
@@ -82,7 +82,7 @@
             placement="bottomRight"
             title="Click here to reverse affix!"
             @click="reverseFix"
-            >Reverse<br />Affix</b-button
+            >Reverse<br />Highlight</b-button
           >
         </div>
       </div>

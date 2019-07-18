@@ -13,7 +13,7 @@ export default new Router({
     {
       path: "*",
       name: "notFound",
-      component: () => import("./../components/NotFound.vue"),
+      component: () => import("../views/NotFound.vue"),
       meta: {
         analytics: {
           pageviewTemplate(route) {
@@ -28,7 +28,7 @@ export default new Router({
     {
       path: "/",
       name: "main",
-      component: () => import("./../components/Main.vue"),
+      component: () => import("../views/Main.vue"),
       meta: {
         analytics: {
           pageviewTemplate(route) {
@@ -42,7 +42,7 @@ export default new Router({
     },
     {
       path: "/laogo",
-      component: () => import("./../components/Layout.vue"),
+      component: () => import("../components/Layout.vue"),
 
       children: [
         {
